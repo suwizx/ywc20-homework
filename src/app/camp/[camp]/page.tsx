@@ -115,3 +115,5 @@ export default function page({ params }: { params: Promise<{ camp: keyof typeof 
         </div>
     )
 }
+
+export const runtime = 'edge';
