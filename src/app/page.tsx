@@ -126,7 +126,7 @@ export default function Home() {
             <motion.div className='max-w-[220px] sm:max-w-md md:max-w-lg lg:max-w-4xl sm:w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 flex-wrap gap-4 w-[850px] items-center justify-center'>
               {camps.map((camp,i) => (
                 <motion.div initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.2, delay: 0.8 + (0.2 * i) ,ease : "easeIn"}} className='w-full' key={camp.name}>
-                  <Link href={`/camp/${camp.path}`} key={camp.name} className={`flex p-4 text-center flex-col items-center justify-center gap-2 w-full aspect-square ${camp.bgcolor} border ${camp.border} rounded-md hover:scale-95 transition outline-2 outline-transparent focus:outline-primary outline-offset-2 hover:cursor-pointer`}>
+                  <Link href={`/camp${camp.path}`} key={camp.name} className={`flex p-4 text-center flex-col items-center justify-center gap-2 w-full aspect-square ${camp.bgcolor} border ${camp.border} rounded-md hover:scale-95 transition outline-2 outline-transparent focus:outline-primary outline-offset-2 hover:cursor-pointer`}>
                     <img src={camp.image.src} alt={camp.name} className='w-full h-auto' />
                     <h3 className={`text-lg font-bold text-white`}>{camp.name}</h3>
                   </Link>
