@@ -1,12 +1,13 @@
 import Logo from "@/../public/images/branding/ywc-logo.png"
 import Image from "next/image"
 import Link from "next/link"
+import { motion } from "motion/react";
 
 import { MdArrowOutward } from "react-icons/md";
 
 export default function Navbar() {
     return (
-        <header className="bg-zinc-950 h-[65px] py-4 px-4 flex items-center justify-center">
+        <motion.header initial={{ y:-20 , opacity : 0 }} animate={{ y:0 , opacity:1 }} className="bg-zinc-950 h-[65px] py-4 px-4 flex items-center justify-center">
             <div className="container  h-full flex items-center justify-between">
                 <Link href={"/"} className="flex items-center gap-2 h-full hover:scale-95 transition">
                     <Image src={Logo} alt="YWC Logo" className="h-full w-auto" />
@@ -22,6 +23,6 @@ export default function Navbar() {
                     ywc.in.th
                 </Link>
             </div>
-        </header>
+        </motion.header>
     )
 }
