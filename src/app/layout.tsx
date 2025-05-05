@@ -14,6 +14,7 @@ const MiSans = Local({
 const MiSansThai = Local({
   src: "../../public/fonts/mi-sans-th/MiSansThaiVF.woff2",
   variable: "--font-mi-sans-th",
+  weight :"100 200 300 400 500 600 700 800 900",
 });
 
 export default function RootLayout({
